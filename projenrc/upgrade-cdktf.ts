@@ -79,7 +79,7 @@ export class UpgradeCDKTF {
                 "This PR initiates the upgrade of CDKTF from version `${{ steps.current_version.outputs.value }}` to version `${{ steps.latest_version.outputs.value }}`.",
                 "Unfortunately, not everything can be automated, and the following steps need to be completed manually:",
                 " ",
-                "- [ ] Update `@cdktf/provider-null` to a version compatible with `cdktf@${{ steps.latest_version.outputs.value }}` [here](https://github.com/cdktf/cdktf-construct-projen-template/blob/main/.projenrc.ts#L84). Look up the version [here](https://github.com/cdktf/cdktf-provider-null/releases/).",
+                "- [ ] Update `@cdktf/provider-null` to a version compatible with `cdktf@${{ steps.latest_version.outputs.value }}` [here](https://github.com/cdktf/construct-projen-template/blob/d62067602139725e957e516ef41d94c384af731a/.projenrc.ts#L84). Look up the version [here](https://github.com/cdktf/cdktf-provider-null/releases/).",
                 "- [ ] Run `npx projen`",
                 " ",
                 "Please checkout this PR, complete the above steps, push the changes to this branch, and then mark this PR as ready for review to complete the upgrade. Thanks!",
