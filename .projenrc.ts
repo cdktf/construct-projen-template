@@ -50,7 +50,6 @@ const project = new cdktf.ConstructLibraryCdktf({
     name: "team-tf-cdk",
     email: "github-team-tf-cdk@hashicorp.com",
   },
-  minMajorVersion: 1,
   npmAccess: NpmAccess.PUBLIC,
   releaseToNpm: false, // you probably want to remove this line, assuming you want to publish to NPM
   // Uncomment the following depending on which package manager(s) you'd like to publish to
