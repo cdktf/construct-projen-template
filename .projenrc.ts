@@ -105,6 +105,7 @@ project.addPackageIgnore("examples");
 project.addPackageIgnore("projenrc");
 project.addPackageIgnore("/.projenrc.ts");
 
+project.addPackageIgnore(".copywrite.hcl");
 // Run copywrite tool to add copyright headers to all files
 project.buildWorkflow?.addPostBuildSteps(
   {

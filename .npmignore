@@ -25,3 +25,4 @@ scripts
 examples
 projenrc
 /.projenrc.ts
+.copywrite.hcl
