@@ -96,6 +96,15 @@ new Automerge(project);
 new UpgradeCDKTF(project);
 new UpgradeNode(project);
 
+// for local developing (e.g. linking local changes to cdktf)
+project.addGitIgnore(".yalc");
+project.addGitIgnore("yalc.lock");
+
+project.addPackageIgnore("scripts");
+project.addPackageIgnore("examples");
+project.addPackageIgnore("projenrc");
+project.addPackageIgnore("/.projenrc.ts");
+
 // Run copywrite tool to add copyright headers to all files
 project.buildWorkflow?.addPostBuildSteps(
   {
