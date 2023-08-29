@@ -78,9 +78,6 @@
   },
   "main": "lib/index.js",
   "license": "MPL-2.0",
-  "publishConfig": {
-    "access": "public"
-  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [
@@ -123,7 +120,7 @@
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
+  "stability": "experimental",
   "jsii": {
     "outdir": "dist",
     "targets": {},

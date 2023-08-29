@@ -5,6 +5,7 @@
 
 // import { snakeCase, pascalCase } from "change-case";
 import { cdktf } from "projen";
+import { Stability } from "projen/lib/cdk";
 import { NpmAccess, UpgradeDependenciesSchedule } from "projen/lib/javascript";
 import { AutoApprove } from "./projenrc/auto-approve";
 import { Automerge } from "./projenrc/automerge";
@@ -50,7 +51,8 @@ const project = new cdktf.ConstructLibraryCdktf({
     name: "team-tf-cdk",
     email: "github-team-tf-cdk@hashicorp.com",
   },
-  npmAccess: NpmAccess.PUBLIC,
+  stability: Stability.EXPERIMENTAL,
+  npmAccess: NpmAccess.RESTRICTED, // change this to PUBLIC to publish to NPM
   releaseToNpm: false, // you probably want to remove this line, assuming you want to publish to NPM
   // Uncomment the following depending on which package manager(s) you'd like to publish to
   // publishToPypi: {
