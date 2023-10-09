@@ -1,11 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@cdktf/provider-null",
-      "version": "8.0.0",
-      "type": "build"
-    },
-    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -25,17 +20,7 @@
       "type": "build"
     },
     {
-      "name": "cdktf",
-      "version": "0.18.0",
-      "type": "build"
-    },
-    {
       "name": "change-case",
-      "type": "build"
-    },
-    {
-      "name": "constructs",
-      "version": "10.0.25",
       "type": "build"
     },
     {
