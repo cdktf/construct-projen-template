@@ -75,13 +75,13 @@ const project = new cdktf.ConstructLibraryCdktf({
   //   moduleName: `github.com/cdktf/${shortName}-go`,
   //   packageName: shortName.replace(/-/g, ""),
   // },
-  cdktfVersion: "^0.18.0",
+  cdktfVersion: "0.19.0",
   jsiiVersion: "^5.1.0",
   minNodeVersion: "18.12.0",
 });
 
 project.addPeerDeps(
-  "cdktf@>=0.18.0",
+  "cdktf@>=0.19.0",
   "@cdktf/provider-null@>=8.0.0",
   "constructs@^10.0.25"
 );
