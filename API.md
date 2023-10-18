@@ -5,7 +5,7 @@ A projen template for CDKTF constructs authored by HashiCorp (internal use only)
 ## Compatibility
 
 - `node` >= 18.12.0
-- `cdktf` >= 0.18.0
+- `cdktf` >= 0.19.0
 - `constructs` >= 10.0.25
 
 ## How to Use
@@ -270,6 +270,7 @@ NoopStack.of(construct: IConstruct)
 | --- | --- | --- |
 | <code><a href="#@cdktf/construct-projen-template.NoopStack.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
 | <code><a href="#@cdktf/construct-projen-template.NoopStack.property.dependencies">dependencies</a></code> | <code>cdktf.TerraformStack[]</code> | *No description.* |
+| <code><a href="#@cdktf/construct-projen-template.NoopStack.property.moveTargets">moveTargets</a></code> | <code>cdktf.TerraformResourceTargets</code> | *No description.* |
 | <code><a href="#@cdktf/construct-projen-template.NoopStack.property.synthesizer">synthesizer</a></code> | <code>cdktf.IStackSynthesizer</code> | *No description.* |
 
 ---
@@ -293,6 +294,16 @@ public readonly dependencies: TerraformStack[];
 ```
 
 - *Type:* cdktf.TerraformStack[]
+
+---
+
+##### `moveTargets`<sup>Required</sup> <a name="moveTargets" id="@cdktf/construct-projen-template.NoopStack.property.moveTargets"></a>
+
+```typescript
+public readonly moveTargets: TerraformResourceTargets;
+```
+
+- *Type:* cdktf.TerraformResourceTargets
 
 ---
 
