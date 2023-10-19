@@ -16,7 +16,7 @@ export class Automerge {
     if (!workflow) throw new Error("no workflow defined");
 
     workflow.on({
-      pullRequest: {
+      pullRequestTarget: {
         types: [
           "opened",
           "labeled",
