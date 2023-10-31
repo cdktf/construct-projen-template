@@ -1,14 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@action-validator/cli",
-      "type": "build"
-    },
-    {
-      "name": "@action-validator/core",
-      "type": "build"
-    },
-    {
       "name": "@types/jest",
       "type": "build"
     },
