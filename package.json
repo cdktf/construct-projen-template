@@ -35,6 +35,8 @@
     "organization": true
   },
   "devDependencies": {
+    "@action-validator/cli": "^0.5.3",
+    "@action-validator/core": "^0.5.3",
     "@cdktf/provider-null": "9.0.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^18",
