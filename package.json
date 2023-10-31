@@ -25,6 +25,7 @@
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
+    "validate-workflows": "npx projen validate-workflows",
     "watch": "npx projen watch",
     "projen": "npx projen"
   },
@@ -34,6 +35,8 @@
     "organization": true
   },
   "devDependencies": {
+    "@action-validator/cli": "^0.5.3",
+    "@action-validator/core": "^0.5.3",
     "@cdktf/provider-null": "9.0.0",
     "@types/jest": "^29.5.6",
     "@types/node": "^18",
