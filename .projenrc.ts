@@ -76,7 +76,7 @@ const project = new cdktf.ConstructLibraryCdktf({
   //   packageName: shortName.replace(/-/g, ""),
   // },
   cdktfVersion: "0.19.0",
-  jsiiVersion: "^5.1.0",
+  jsiiVersion: "^5.2.0",
   minNodeVersion: "18.12.0",
 });
 
