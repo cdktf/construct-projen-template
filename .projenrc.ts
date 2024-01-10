@@ -83,7 +83,7 @@ const project = new cdktf.ConstructLibraryCdktf({
 
 project.addPeerDeps(
   "cdktf@>=0.20.0",
-  "@cdktf/provider-null@>=9.0.0",
+  "@cdktf/provider-null@>=10.0.0",
   "constructs@^10.0.25"
 );
 project.addDevDeps(

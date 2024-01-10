@@ -37,7 +37,7 @@
   "devDependencies": {
     "@action-validator/cli": "^0.5.4",
     "@action-validator/core": "^0.5.4",
-    "@cdktf/provider-null": "9.0.0",
+    "@cdktf/provider-null": "10.0.0",
     "@types/jest": "^29.5.11",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
@@ -65,7 +65,7 @@
     "typescript": "~5.2.0"
   },
   "peerDependencies": {
-    "@cdktf/provider-null": ">=9.0.0",
+    "@cdktf/provider-null": ">=10.0.0",
     "cdktf": ">=0.20.0",
     "constructs": "^10.0.25"
   },
