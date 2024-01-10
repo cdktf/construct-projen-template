@@ -28,6 +28,7 @@ const githubActionPinnedVersions = {
   "peter-evans/create-pull-request": "153407881ec5c347639a548ade7d8ad1d6740e38", // v5.0.2
 };
 
+const constructsVersion = "10.3.0";
 const project = new cdktf.ConstructLibraryCdktf({
   name,
   description: "A projen template for CDKTF constructs authored by HashiCorp",
@@ -76,6 +77,7 @@ const project = new cdktf.ConstructLibraryCdktf({
   //   packageName: shortName.replace(/-/g, ""),
   // },
   cdktfVersion: "0.20.0",
+  constructsVersion,
   jsiiVersion: "~5.2.0",
   typescriptVersion: "~5.2.0", // should always be the same major/minor as JSII
   minNodeVersion: "18.12.0",
@@ -84,7 +86,7 @@ const project = new cdktf.ConstructLibraryCdktf({
 project.addPeerDeps(
   "cdktf@>=0.20.0",
   "@cdktf/provider-null@>=10.0.0",
-  "constructs@^10.0.25"
+  "constructs@>=" + constructsVersion
 );
 project.addDevDeps(
   "change-case",

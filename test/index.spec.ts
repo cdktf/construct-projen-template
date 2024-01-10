@@ -33,7 +33,7 @@ test("synthesizes the null provider", () => {
         "required_providers": {
           "null": {
             "source": "null",
-            "version": "3.2.1"
+            "version": "3.2.2"
           }
         }
       }
