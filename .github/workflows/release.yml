@@ -60,6 +60,7 @@ jobs:
         with:
           name: build-artifact
           path: dist
+          overwrite: true
   release_github:
     name: Publish to GitHub Releases
     needs: release
