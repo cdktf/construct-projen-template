@@ -91,7 +91,11 @@ project.addPeerDeps(
 project.addDevDeps(
   "change-case",
   "@action-validator/core",
-  "@action-validator/cli"
+  "@action-validator/cli",
+  // @typescript-eslint v7+ requires Node.js 18.18, so we are stuck on v6
+  // The below lines can probably be removed once Node 18 goes EOL and we upgrade minNodeVersion to 20
+  "@typescript-eslint/eslint-plugin@^6",
+  "@typescript-eslint/parser@^6"
 );
 
 new CustomizedLicense(project);
