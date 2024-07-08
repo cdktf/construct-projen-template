@@ -25,6 +25,7 @@ const githubActionPinnedVersions = {
   "actions/upload-artifact": "65462800fd760344b1a7b4382951275a0abb4808", // v4.3.3
   "amannn/action-semantic-pull-request":
     "0723387faaf9b38adef4775cd42cfd5155ed6017", // v5.5.3
+  "hashicorp/setup-copywrite": "32638da2d4e81d56a0764aa1547882fc4d209636", // v1.1.3
   "peter-evans/create-pull-request": "c5a7806660adbe173f04e3e038b0ccdcd758773c", // v6.1.0
 };
 
@@ -125,7 +126,7 @@ project.addPackageIgnore(".copywrite.hcl");
 project.buildWorkflow?.addPostBuildSteps(
   {
     name: "Setup Copywrite tool",
-    uses: "hashicorp/setup-copywrite@867a1a2a064a0626db322392806428f7dc59cb3e", // v1.1.2
+    uses: "hashicorp/setup-copywrite",
   },
   { name: "Add headers using Copywrite tool", run: "copywrite headers" }
 );
