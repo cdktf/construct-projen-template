@@ -6,7 +6,7 @@ A projen template for CDKTF constructs authored by HashiCorp (internal use only)
 
 - `node` >= 18.12.0
 - `cdktf` >= 0.20.0
-- `constructs` >= 10.0.25
+- `constructs` >= 10.3.0
 
 ## How to Use
 
