@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: 21 8 * * *
   workflow_dispatch: {}
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+concurrency: {}
 jobs:
   upgrade:
     name: Upgrade Node.js
