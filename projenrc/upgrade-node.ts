@@ -67,13 +67,13 @@ export class UpgradeNode {
           },
           {
             name: "Run upgrade script",
-            if: "env.CURRENT_NODEJS_VERSION_SHORT != env.NEW_NODEJS_VERSION_SHORT",
+            if: "env.CURRENT_NODEJS_VERSION_SHORT < env.NEW_NODEJS_VERSION_SHORT",
             run: "scripts/update-node.sh $NEW_NODEJS_VERSION",
           },
           {
             name: "Get values for pull request",
             id: "latest_version",
-            if: "env.CURRENT_NODEJS_VERSION_SHORT != env.NEW_NODEJS_VERSION_SHORT",
+            if: "env.CURRENT_NODEJS_VERSION_SHORT < env.NEW_NODEJS_VERSION_SHORT",
             run: [
               `echo "value=$NEW_NODEJS_VERSION" >> $GITHUB_OUTPUT`,
               `echo "short=$NEW_NODEJS_VERSION_SHORT" >> $GITHUB_OUTPUT`,
@@ -81,7 +81,7 @@ export class UpgradeNode {
           },
           {
             name: "Create Pull Request",
-            if: "env.CURRENT_NODEJS_VERSION_SHORT != env.NEW_NODEJS_VERSION_SHORT",
+            if: "env.CURRENT_NODEJS_VERSION_SHORT < env.NEW_NODEJS_VERSION_SHORT",
             uses: "peter-evans/create-pull-request@v3",
             with: {
               "commit-message":
