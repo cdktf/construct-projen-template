@@ -39,7 +39,7 @@
     "@action-validator/cli": "^0.6.0",
     "@action-validator/core": "^0.6.0",
     "@cdktf/provider-null": "10.0.0",
-    "@types/jest": "^29.5.13",
+    "@types/jest": "^29.5.14",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
