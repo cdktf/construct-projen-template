@@ -11,6 +11,7 @@ import { AutoApprove } from "./projenrc/auto-approve";
 import { Automerge } from "./projenrc/automerge";
 import { CustomizedLicense } from "./projenrc/customized-license";
 import { UpgradeCDKTF } from "./projenrc/upgrade-cdktf";
+import { UpgradeJSIIAndTypeScript } from "./projenrc/upgrade-jsii-typescript";
 import { UpgradeNode } from "./projenrc/upgrade-node";
 
 // `name` is expected to be in the format "cdktf-project-name" or "@cdktf/project-name"
@@ -30,6 +31,8 @@ const githubActionPinnedVersions = {
 };
 
 const constructsVersion = "10.3.0";
+/** JSII and TSII should always use the same major/minor version range */
+const typescriptVersion = "~5.4.0";
 const project = new cdktf.ConstructLibraryCdktf({
   name,
   description: "A projen template for CDKTF constructs authored by HashiCorp",
@@ -79,8 +82,8 @@ const project = new cdktf.ConstructLibraryCdktf({
   // },
   cdktfVersion: "0.20.0",
   constructsVersion,
-  jsiiVersion: "~5.4.0",
-  typescriptVersion: "~5.4.0", // should always be the same major/minor as JSII
+  typescriptVersion,
+  jsiiVersion: typescriptVersion,
   minNodeVersion: "18.12.0",
 });
 
@@ -93,6 +96,7 @@ project.addDevDeps(
   "change-case",
   "@action-validator/core",
   "@action-validator/cli",
+  "semver",
   // eslint v9+ and @typescript-eslint v7+ require Node.js 18.18, so we are stuck on v8 and v6 respectively
   // The below lines can probably be removed once Node 18 goes EOL and we upgrade minNodeVersion to 20
   "eslint@^8",
@@ -104,6 +108,7 @@ new CustomizedLicense(project);
 new AutoApprove(project);
 new Automerge(project);
 new UpgradeCDKTF(project);
+new UpgradeJSIIAndTypeScript(project, typescriptVersion);
 new UpgradeNode(project);
 
 const validateTask = project.addTask("validate-workflows", {
