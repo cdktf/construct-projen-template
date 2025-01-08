@@ -26,7 +26,7 @@ export class UpgradeJSIIAndTypeScript {
       workflowDispatch: {
         inputs: {
           newVersion: {
-            description: `New JSII/TypeScript version (e.g. \`${plainVersion}\`), without carets or tildes`,
+            description: `New JSII/TypeScript version (e.g. "${plainVersion}"), without carets or tildes`,
             required: true,
             default: defaultVersion,
             type: "string",
@@ -60,28 +60,12 @@ export class UpgradeJSIIAndTypeScript {
             run: "yarn install",
           },
           {
-            name: "Do the upgrade in the right place",
-            env: {
-              NEW_VERSION: "{{ inputs.newVersion }}",
-            },
-            run: [
-              `echo "$NEW_VERSION"`, // this isn't really necessary but we need to force Projen to create a multiline string
-              `sed -i "s/typescriptVersion = \".*\";/typescriptVersion = \"~$NEW_VERSION\";/" ./projenrc.ts`,
-            ].join("\n"),
-          },
-          {
-            name: "Regenerate files",
-            env: {
-              CI: "false",
-            },
-            run: "npx projen",
+            name: "Run upgrade script",
+            run: "scripts/update-jsii-typescript.sh $NEW_VERSION",
           },
           {
             name: "Get values for pull request",
             id: "latest_version",
-            env: {
-              NEW_VERSION: "{{ inputs.newVersion }}",
-            },
             run: [
               `NEW_VERSION_SHORT=$(cut -d "." -f 1,2 <<< "$NEW_VERSION")`,
               `echo "value=$NEW_VERSION" >> $GITHUB_OUTPUT`,
@@ -116,6 +100,7 @@ export class UpgradeJSIIAndTypeScript {
         env: {
           CI: "true",
           CHECKPOINT_DISABLE: "1",
+          NEW_VERSION: "${{ inputs.new_version }}", // should be newVersion but Projen converts it to snake_case
         },
         permissions: {
           contents: JobPermission.READ,
