@@ -52,6 +52,7 @@ tsconfig.json
 !/.github/workflows/auto-approve.yml
 !/.github/workflows/automerge.yml
 !/.github/workflows/upgrade-cdktf.yml
+!/.github/workflows/upgrade-jsii-typescript.yml
 !/.github/workflows/upgrade-node.yml
 .yalc
 yalc.lock
