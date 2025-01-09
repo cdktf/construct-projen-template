@@ -34,7 +34,6 @@ The following Actions either need to be manually triggered or require significan
   2. Update the [object](https://github.com/cdktf/construct-projen-template/blob/447d872d8f030ebd3d45ad519f78db5768842f14/.projenrc.ts#L21-L31)
   3. Run `npx projen`
   4. Create a new PR with the title `chore(deps): update pinned versions of GitHub Actions`
-- **`constructs` library upgrades**: Because `constructs` is a peer dependency, the `upgrade-main` script described above will _never_ increment its version; this will always need to be done manually by [editing](https://github.com/cdktf/construct-projen-template/blob/447d872d8f030ebd3d45ad519f78db5768842f14/.projenrc.ts#L33) `.projenrc.ts`. This could _in theory_ be (semi)automated like some of our other upgrade workflows described above for things like CDKTF, Node, and JSII, but in practice we currently have no logic or criteria that governs when `constructs` should be updated; as such, creating a custom workflow for it felt like more effort than it's really worth.
 
 
 ## Releasing
