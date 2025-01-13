@@ -173,7 +173,7 @@ export class UpgradeJSIIAndTypeScript {
                 "because the previous version is close to EOL or no longer supported. Support timeline: ",
                 "https://github.com/aws/jsii-compiler/blob/main/README.md#gear-maintenance--support",
               ].join(" "),
-              labels: "do-not-merge,automated",
+              labels: "auto-approve,automerge,automated",
               token: "${{ secrets.PROJEN_GITHUB_TOKEN }}",
               author: "team-tf-cdk <github-team-tf-cdk@hashicorp.com>",
               committer: "team-tf-cdk <github-team-tf-cdk@hashicorp.com>",
