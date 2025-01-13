@@ -71,6 +71,9 @@
     "cdktf": ">=0.20.0",
     "constructs": ">=10.3.0"
   },
+  "resolutions": {
+    "cssstyle": "4.1.0"
+  },
   "keywords": [
     "cdk",
     "cdktf"
