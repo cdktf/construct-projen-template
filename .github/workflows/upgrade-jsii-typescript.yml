@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       new_version:
-        description: New JSII/TypeScript version (e.g. "5.5.0"), without carets or tildes
-        required: true
-        default: 5.6.0
+        description: New JSII/TypeScript version (e.g. "5.7.0"), without carets or tildes
+        required: false
+        default: 5.8.0
         type: string
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
