@@ -68,7 +68,7 @@
     },
     {
       "name": "jest-junit",
-      "version": "^15",
+      "version": "^16",
       "type": "build"
     },
     {
@@ -118,6 +118,11 @@
       "name": "typescript",
       "version": "~5.5.0",
       "type": "build"
+    },
+    {
+      "name": "cssstyle",
+      "version": "4.1.0",
+      "type": "override"
     },
     {
       "name": "@cdktf/provider-null",
