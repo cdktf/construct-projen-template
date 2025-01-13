@@ -5,7 +5,6 @@
 
 import { javascript } from "projen";
 import { JobPermission } from "projen/lib/github/workflows-model";
-import * as semver from "semver";
 
 /**
  * Helper script for upgrading JSII and TypeScript in the right way.
@@ -20,8 +19,6 @@ export class UpgradeJSIIAndTypeScript {
     if (!workflow) throw new Error("no workflow defined");
 
     const plainVersion = typescriptVersion.replace("~", "");
-    const defaultVersion = semver.inc(plainVersion, "minor");
-
     workflow.on({
       schedule: [{ cron: "06 11 * * *" }], // Runs once a day
       workflowDispatch: {
@@ -29,7 +26,6 @@ export class UpgradeJSIIAndTypeScript {
           newVersion: {
             description: `New JSII/TypeScript version (e.g. "${plainVersion}"), without carets or tildes`,
             required: false,
-            default: defaultVersion,
             type: "string",
           },
         },

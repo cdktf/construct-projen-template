@@ -9,7 +9,6 @@ on:
       new_version:
         description: New JSII/TypeScript version (e.g. "5.5.0"), without carets or tildes
         required: false
-        default: 5.6.0
         type: string
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
