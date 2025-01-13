@@ -82,7 +82,7 @@ export class UpgradeJSIIAndTypeScript {
           },
           {
             // In an ideal world this is where we'd validate that the manually-input version actually exists
-            // In practice, I couldn't figure out how to do this with manual effort and it wasn't worth it
+            // In practice, I couldn't figure out how to do this properly and it wasn't worth the effort
             // name: "Check if the manually-input version actually exists (has been published to NPM)",
             name: "Save the manually-input version to environment variables for comparison",
             if: "${{ inputs.new_version }}", // should be newVersion but Projen converts it to snake_case
@@ -102,7 +102,7 @@ export class UpgradeJSIIAndTypeScript {
             ].join("\n"),
           },
           {
-            name: "Cancel the rest of the run if the earliest supported version isn't newer than what we have already",
+            name: "Cancel the rest of the run if the desired version isn't newer than what we have installed already",
             if: "${{ !((env.NEW_JSII_VERSION_MAJOR > env.CURRENT_JSII_VERSION_MAJOR) || (env.NEW_JSII_VERSION_MINOR > env.CURRENT_JSII_VERSION_MINOR)) }}",
             env: {
               GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",

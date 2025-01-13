@@ -60,7 +60,7 @@ jobs:
           echo "NEW_JSII_VERSION_SHORT=$NEW_VERSION_SHORT" >> $GITHUB_ENV
           echo "NEW_JSII_VERSION_MAJOR=$NEW_VERSION_MAJOR" >> $GITHUB_ENV
           echo "NEW_JSII_VERSION_MINOR=$NEW_VERSION_MINOR" >> $GITHUB_ENV
-      - name: Cancel the rest of the run if the earliest supported version isn't newer than what we have already
+      - name: Cancel the rest of the run if the desired version isn't newer than what we have installed already
         if: ${{ !((env.NEW_JSII_VERSION_MAJOR > env.CURRENT_JSII_VERSION_MAJOR) || (env.NEW_JSII_VERSION_MINOR > env.CURRENT_JSII_VERSION_MINOR)) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
