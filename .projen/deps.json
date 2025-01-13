@@ -103,10 +103,6 @@
       "type": "build"
     },
     {
-      "name": "semver",
-      "type": "build"
-    },
-    {
       "name": "ts-jest",
       "type": "build"
     },
