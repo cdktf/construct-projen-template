@@ -104,6 +104,10 @@ export class UpgradeNode {
               `echo "is_newer=$IS_NEWER" >> $GITHUB_OUTPUT`,
             ].join("\n"),
           },
+          {
+            name: "Debugging",
+            run: "echo ${{ steps.latest_version.outputs.is_newer }}",
+          },
         ],
         outputs: {
           current: {
