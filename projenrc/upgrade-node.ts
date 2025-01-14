@@ -136,7 +136,7 @@ export class UpgradeNode {
         name: "Upgrade Node.js",
         runsOn: ["ubuntu-latest"],
         needs: ["version"],
-        if: "${{ always() && needs.version.outputs.should_upgrade }}",
+        if: "always() && needs.version.outputs.should_upgrade",
         steps: [
           {
             name: "Checkout",
