@@ -101,7 +101,7 @@ export class UpgradeNode {
             run: [
               `echo "value=$NEW_NODEJS_VERSION" >> $GITHUB_OUTPUT`,
               `echo "major=$NEW_NODEJS_VERSION_MAJOR" >> $GITHUB_OUTPUT`,
-              `[[ "$NEW_NODEJS_VERSION_MAJOR" > "$CURRENT_NODEJS_VERSION_MAJOR" || ("$NEW_NODEJS_VERSION_MAJOR" == "$CURRENT_NODEJS_VERSION_MAJOR" && "$NEW_NODEJS_VERSION_MINOR" > "$CURRENT_NODEJS_VERSION_MINOR") ]] && IS_NEWER=1 || IS_NEWER=0`,
+              `[[ "$NEW_NODEJS_VERSION_MAJOR" > "$CURRENT_NODEJS_VERSION_MAJOR" || ("$NEW_NODEJS_VERSION_MAJOR" == "$CURRENT_NODEJS_VERSION_MAJOR" && "$NEW_NODEJS_VERSION_MINOR" > "$CURRENT_NODEJS_VERSION_MINOR") ]] && IS_NEWER=true`,
               `echo "is_newer=$IS_NEWER" >> $GITHUB_OUTPUT`,
             ].join("\n"),
           },
