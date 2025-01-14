@@ -100,7 +100,7 @@ jobs:
 
             While this PR could be merged as-is, it is recommended that you scan the code (especially `.projenrc.ts`) to see if there are any comments indicating changes that can/should be made when upgrading Node, such as: 
             ```// The following line can be removed when upgrading to Node ${{ needs.version.outputs.major }}```
-          labels: do-not-merge,automated,security
+          labels: automerge,automated,security
           token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
           author: team-tf-cdk <github-team-tf-cdk@hashicorp.com>
           committer: team-tf-cdk <github-team-tf-cdk@hashicorp.com>
