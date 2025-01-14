@@ -174,7 +174,7 @@ export class UpgradeNode {
                 "to see if there are any comments indicating changes that can/should be made when upgrading Node, such as:",
                 "\n```// The following line can be removed when upgrading to Node ${{ needs.version.outputs.major }}```",
               ].join(" "),
-              labels: "automerge,automated,security",
+              labels: "do-not-merge,automated,security",
               token: "${{ secrets.PROJEN_GITHUB_TOKEN }}",
               author: "team-tf-cdk <github-team-tf-cdk@hashicorp.com>",
               committer: "team-tf-cdk <github-team-tf-cdk@hashicorp.com>",
