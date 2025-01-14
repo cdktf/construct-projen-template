@@ -146,7 +146,7 @@ export class UpgradeNode {
             name: "Setup Node.js",
             uses: "actions/setup-node",
             with: {
-              "node-version": project.minNodeVersion,
+              "node-version": "${{ needs.version.outputs.latest }}",
             },
           },
           {
