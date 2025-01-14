@@ -21,7 +21,8 @@ export class UpgradeNode {
       workflowDispatch: {
         inputs: {
           version: {
-            description: "Node.js version to upgrade to, in format: 12.34.56",
+            description:
+              "Node.js version to upgrade to, in the format: 12.34.56",
             required: false,
             type: "string",
           },
@@ -135,7 +136,7 @@ export class UpgradeNode {
         name: "Upgrade Node.js",
         runsOn: ["ubuntu-latest"],
         needs: ["version"],
-        if: "${{ needs.version.outputs.should_upgrade }}",
+        if: "${{ always() && needs.version.outputs.should_upgrade }}",
         steps: [
           {
             name: "Checkout",
