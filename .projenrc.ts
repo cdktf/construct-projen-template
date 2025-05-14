@@ -84,7 +84,7 @@ const project = new cdktf.ConstructLibraryCdktf({
   constructsVersion,
   typescriptVersion,
   jsiiVersion: typescriptVersion,
-  minNodeVersion: "18.12.0",
+  minNodeVersion: "20.9.0",
 });
 
 project.addPeerDeps(
