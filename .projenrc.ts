@@ -30,7 +30,7 @@ const githubActionPinnedVersions = {
   "peter-evans/create-pull-request": "271a8d0340265f705b14b6d32b9829c1cb33d45e", // v7.0.8
 };
 
-const constructsVersion = "10.3.0";
+const constructsVersion = "10.4.2";
 /** JSII and TS should always use the same major/minor version range */
 const typescriptVersion = "~5.7.0";
 const project = new cdktf.ConstructLibraryCdktf({
@@ -80,7 +80,7 @@ const project = new cdktf.ConstructLibraryCdktf({
   //   moduleName: `github.com/cdktf/${shortName}-go`,
   //   packageName: shortName.replace(/-/g, ""),
   // },
-  cdktfVersion: "0.20.0",
+  cdktfVersion: "0.21.0",
   constructsVersion,
   typescriptVersion,
   jsiiVersion: typescriptVersion,
@@ -88,7 +88,7 @@ const project = new cdktf.ConstructLibraryCdktf({
 });
 
 project.addPeerDeps(
-  "cdktf@>=0.20.0",
+  "cdktf@>=0.21.0",
   "@cdktf/provider-null@>=10.0.0",
   "constructs@>=" + constructsVersion
 );
