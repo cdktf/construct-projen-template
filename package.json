@@ -38,7 +38,7 @@
   "devDependencies": {
     "@action-validator/cli": "^0.6.0",
     "@action-validator/core": "^0.6.0",
-    "@cdktf/provider-null": "10.0.0",
+    "@cdktf/provider-null": "11.0.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^8",
