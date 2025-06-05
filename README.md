@@ -5,8 +5,8 @@ A projen template for CDKTF constructs authored by HashiCorp (internal use only)
 ## Compatibility
 
 - `node` >= 20.9.0
-- `cdktf` >= 0.20.0
-- `constructs` >= 10.3.0
+- `cdktf` >= 0.21.0
+- `constructs` >= 10.4.2
 
 ## How to Use
 
